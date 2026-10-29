@@ -1,4 +1,4 @@
 gradio
 pandas
 plotly
-openpyx1
+openpyxl
