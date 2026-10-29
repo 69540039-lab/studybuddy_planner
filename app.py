@@ -12,7 +12,7 @@ Original file is located at
 # ระบบวางแผนอ่านหนังสือ ติดตามผล Dashboard ประวัติ และ Excel
 # ============================================================
 
-!pip -q install gradio pandas plotly openpyxl
+# Dependencies are installed via requirements.txt
 
 import os
 import json
@@ -954,4 +954,8 @@ with gr.Blocks(
     )
 
 # เปิดเว็บแอป
-demo.launch(share=True)
+demo.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 7860)),
+    share=False
+)
